@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Search Places</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <input type="hidden" id="plazes" value="">
+
+  <div ion-fixed style="position: absolute;
+  top: 1%;
+  right: 1%;
+  width: auto;
+  height: auto;">
+
+    <div id="more_options">
+      <table style="border:0px solid black;">
+        <tr>
+          <td id="export_excel_buttons" style="display: none;">
+            <button ion-button icon-start color="danger-tint" round
+              (click)="export_excel()">
+              <ion-icon name="stats"></ion-icon>
+              &nbsp;Export Excel&nbsp;
+            </button>&nbsp;
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <input id="pac-inputs" class="controls" type="text" placeholder="Search Box">
+  <div id="placez" style="width: 100%;height: 100%;"></div>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Cabang List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item-group>
+    <ion-item *ngFor="let item of items" (click)="itemSelected(item.KdCabang,item.NamaCabang)">
+      <ion-icon name="pin" item-start></ion-icon>
+      {{ item.NamaCabang }}
+    </ion-item>
+  </ion-item-group>
+
+</ion-content>

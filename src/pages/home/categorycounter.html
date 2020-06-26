@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Category Counter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item-group>
+    <ion-item (click)="itemSelected(0,'All Counters')">
+      <ion-icon name="home" item-start></ion-icon>
+      All Category
+    </ion-item>
+    <ion-item (click)="itemSelected(1,'Oemah Herborist')">
+      <ion-icon name="home" item-start></ion-icon>
+      Oemah Herborist
+    </ion-item>
+    <ion-item (click)="itemSelected(2,'Fragrance Bar')">
+      <ion-icon name="home" item-start></ion-icon>
+      Fragrance Bar
+    </ion-item>
+  </ion-item-group>
+</ion-content>

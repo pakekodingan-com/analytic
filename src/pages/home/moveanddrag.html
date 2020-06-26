@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Radius Setup
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="apply($event)">
+        <ion-icon name="checkmark-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="outer-content">
+
+  <ion-item-group>
+    <ion-item-divider color="light">Slide Radius</ion-item-divider>
+    <ion-item>
+      <ion-range min="0" max="10000" pin="true" [(ngModel)]="radius" color="secondary">
+        <ion-icon range-left small name="radius"></ion-icon>
+        <ion-icon range-right name="radius"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-item-group>
+
+  <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <ion-list radio-group formControlName="langs" [(ngModel)]="place_type">
+
+      <ion-item-divider color="light">Place Type Nearby System By Google</ion-item-divider>
+
+      <ion-item>
+        <ion-label>None</ion-label>
+        <ion-radio value="none"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Beauty Salon</ion-label>
+        <ion-radio value="beauty_salon"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cafe</ion-label>
+        <ion-radio value="cafe"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Convenience Store </ion-label>
+        <ion-radio value="convenience_store "></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Department Store </ion-label>
+        <ion-radio value="department_store "></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Grocery Or Supermarket</ion-label>
+        <ion-radio value="grocery_or_supermarket"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hair Care</ion-label>
+        <ion-radio value="hair_care "></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pharmacy</ion-label>
+        <ion-radio value="pharmacy"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Shopping Mall </ion-label>
+        <ion-radio value="shopping_mall"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Spa</ion-label>
+        <ion-radio value="spa"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Scala</ion-label>
+        <ion-radio value="scala"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Supermarket</ion-label>
+        <ion-radio value="supermarket"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+  </form>
+</ion-content>
+
+<style>
+  ion-list+ion-list {
+    margin-top: 0;
+  }
+
+  .small-text {
+    font-size: 10px;
+  }
+
+</style>

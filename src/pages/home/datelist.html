@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="danger-tint">
+    <ion-title id="loading" style="display: none;">Loading...</ion-title>
+    <ion-title id="change_date">Change Date</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item-group>
+    <ion-item *ngFor="let z of listDate" (click)="dateSelected(z.date)">{{z.date}}</ion-item>
+  </ion-item-group>
+
+</ion-content>

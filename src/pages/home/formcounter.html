@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Form Counter</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only id="addform" (click)="formadd()">
+        <ion-icon name="clipboard"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only id="addmap" (click)="mapadd()" style="display: none;">
+        <ion-icon name="map"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only id="savemap" (click)="save()" style="display: none;">
+        <ion-icon name="checkmark-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="search" style="width: 100%;height: 100%;"></div>
+  <ion-list inset id="formadd" style="display: none;">
+    <textarea id="addresses" rows="5" style="border:none;width: 100%;" style="display: none;"></textarea>
+
+    <div padding>
+      <ion-item>
+        <ion-label floating>Outlet Name</ion-label>
+        <ion-input [(ngModel)]="outletname" type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-textarea rows="3" [(ngModel)]="address"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Note</ion-label>
+        <ion-textarea rows="3" [(ngModel)]="note"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Latitude</ion-label>
+        <ion-input [(ngModel)]="latitude" type="text" value="" style="text-align: right;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Longitude</ion-label>
+        <ion-input [(ngModel)]="longitude" type="text" value="" style="text-align: right;"></ion-input>
+      </ion-item>
+    </div>
+    <ion-item>
+      <ion-label floating>Openig Date</ion-label>
+      <ion-datetime [(ngModel)]="opening_date" displayFormat="MM-DD-YYYY" min="2020-02-01" max="2020-12-31">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Closing Date</ion-label>
+      <ion-datetime [(ngModel)]="closing_date" displayFormat="MM-DD-YYYY" min="2020-02-01" max="2020-12-31">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Category</ion-label>
+      <ion-select [(ngModel)]="category">
+        <ion-option value="1">Oemah Herborist</ion-option>
+        <ion-option value="2">Fragrance Bar</ion-option>
+        <ion-option value="9">Others</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="pac-card" id="pac-card">
+    <div>
+      <div id="title">
+        Autocomplete search
+      </div>
+      <br>
+    </div>
+    <div id="pac-container">
+      <input id="pac-input" type="text" placeholder="Enter a location">
+    </div>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,149 @@
+<!-- <ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>VCI Data Analytics</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content no-padding>
+  <input type="hidden" id="sum_nearby" value="0">
+  <input type="hidden" id="yang_ke" value="0">
+  <div ion-fixed style="position: absolute;
+  top: 1%;
+  right: 1%;
+  width: auto;
+  height: auto;">
+
+    <div id="more_options">
+      <table style="border:0px solid black;">
+        <tr>
+          <td id="analytic_button" style="display: none;">
+            <button ion-button icon-start color="danger-tint" round
+              (click)="open_data_analytics(latitude,longitude,radius,place_type)">
+              <ion-icon name="stats"></ion-icon>
+              &nbsp;Show Analytics&nbsp;
+            </button>&nbsp;
+          </td>
+          <td>
+            <button ion-button icon-start color="primary-tint" round (click)="cabanglist($event,'0000-00-00')">
+              <ion-icon name="pin"></ion-icon>
+              &nbsp;{{cabang_name}}&nbsp;
+            </button>&nbsp;
+          </td>
+          <td>
+            <img (click)="menu($event)" src="assets/imgs/logo.png" width="50" height="50" style="border-bottom-left-radius: 50px;
+                              border-top-left-radius: 50px;
+                              border-bottom-right-radius: 50px;
+                              border-top-right-radius: 50px;
+                              border:3px solid #fff;
+                              background-color: #fff;">
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- <div ion-fixed style="position: absolute;
+  top: 1%;
+  left: 1%;
+  width: auto;
+  height: auto;">
+    <table style="border:0px solid black;">
+      <tr>
+        <td>
+          <button ion-button color="light" icon-only menuToggle>
+            <ion-icon name='menu'></ion-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div> -->
+  <div #map id="map"></div>
+
+  <div ion-fixed id="legend" style="
+    position: absolute;
+    right:8px;
+    bottom:5px;
+    width: auto;
+    height: auto;
+    display: none;">
+    <div id="more_options">
+      <table style="border:0px solid black;">
+        <tr>
+          <td>
+            <ion-card>
+
+              <ion-item-group>
+                <ion-list no-border>
+                  <ion-item-divider color="light">
+                    <table style="width: 100%;">
+                      <tr>
+                        <td>
+                          <b>Outlets Maping</b>
+                        </td>
+                        <td style="text-align: right;">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </td>
+                      </tr>
+                    </table>
+                  </ion-item-divider>
+                </ion-list>
+              </ion-item-group>
+
+              <ion-card-content>
+                <table style="border: 0px solid #222;width: 100%;">
+                  <tr>
+                    <td>
+                      <b>Map Description</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40%;">
+                      Radius
+                    </td>
+                    <td style="width: 60%;">
+                      : {{radiuz}} Km
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40%;">
+                      Cabang
+                    </td>
+                    <td style="width: 60%;">
+                      : {{cabang_name}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40%;">
+                      Scope
+                    </td>
+                    <td style="width: 60%;">
+                      : {{scoope}} Outlet
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40%;">
+                      Courtesy Google
+                    </td>
+                    <td style="width: 60%;">
+                      : {{sum_nearby}} {{type_nearby}}
+                    </td>
+                  </tr>
+                </table>
+                <p style="color:#ffffff">
+                  <!-- Wait a minute. Wait a minute, Doc. <br> -->
+                  Uhhh... Are you telling me that you built a time machine built a time machine...
+                  <!-- out of a DeLorean?! Whoa. This is heavy. -->
+                </p>
+              </ion-card-content>
+
+            </ion-card>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="danger-tint">
+    <ion-title>Salesman List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item-group>
+    <ion-item *ngFor="let item of items" (click)="itemSelected(cabang,item.kdsalesman, item.salesname)">
+      <ion-icon name="person" item-start></ion-icon>
+      {{ item.salesname }}
+    </ion-item>
+  </ion-item-group>
+
+</ion-content>

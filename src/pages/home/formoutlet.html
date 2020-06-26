@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Form Outlet</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-grid style="background-color: #d7d8da;">
+    <ion-row>
+      <ion-col style="height: 50px;background-color: #f25454;cursor:pointer" (click)="waiting_verified()">
+        <p style="color: #fff;text-align: center;vertical-align: middle;"><b>Waiting Verified</b></p>
+      </ion-col>
+      <ion-col style="height: 50px;background-color: #ffd31a;cursor:pointer" (click)="not_verified()">
+        <p style="color: #fff;text-align: center;vertical-align: middle;"><b>Not Verified</b></p>
+      </ion-col>
+      <ion-col style="height: 50px;background-color: #28e070;cursor:pointer" (click)="verified()">
+        <p style="color: #fff;text-align: center;vertical-align: middle;"><b>Verified</b></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-item-group id="waiting_verified">
+    <ion-item-divider color="light">Waiting Verified</ion-item-divider>
+    <ion-item>Angola</ion-item>
+    <ion-item>Argentina</ion-item>
+    <ion-item>Armenia</ion-item>
+    <ion-item>Australia</ion-item>
+    <ion-item>Austria</ion-item>
+  </ion-item-group>
+
+  <ion-item-group id="not_verified" style="display: none;">
+    <ion-item-divider color="light">Not Verified</ion-item-divider>
+    <ion-item>Bangladesh</ion-item>
+    <ion-item>Belarus</ion-item>
+    <ion-item>Belgium</ion-item>
+    <ion-item>Bhutan</ion-item>
+    <ion-item>Bolivia</ion-item>
+    <ion-item>Brazil</ion-item>
+  </ion-item-group>
+
+  <ion-item-group id="verified" style="display: none;">
+    <ion-item-divider color="light">Verified</ion-item-divider>
+    <ion-item>Cambodia</ion-item>
+    <ion-item>Cameroon</ion-item>
+    <ion-item>Canada</ion-item>
+    <ion-item>Chile</ion-item>
+    <ion-item>China</ion-item>
+    <ion-item>Colombia</ion-item>
+    <ion-item>Costa Rica</ion-item>
+    <ion-item>Cuba</ion-item>
+    <ion-item>Cyprus</ion-item>
+    <ion-item>Czech Republic</ion-item>
+  </ion-item-group>
+</ion-content>

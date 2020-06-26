@@ -1,0 +1,35 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list no-lines>
+      <br>
+      <ion-item menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-start></ion-icon>
+        {{p.title}}
+      </ion-item>
+      <ion-item menuClose ion-item (click)="logout()">
+        <ion-icon name="exit" item-start></ion-icon>
+        Logout
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+
+  <ion-footer>
+    <!-- <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar> -->
+    <p style="bottom: 2%;">
+      &nbsp;&nbsp;&nbsp;MyMaps v1
+  </ion-footer>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,163 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title style="text-align: center;">
+      Menu
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-row>
+    <ion-col (click)="tracking_sales()" style="background-color:transparent; border-bottom-left-radius:
+          15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius:
+          15px;border-bottom-left-radius: 15px;
+          margin-left: 5px;margin-right:5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="map" color="secondary"></!-->
+            <img src="assets/imgs/maps.png" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">Tracking</td>
+        </tr>
+      </table>
+    </ion-col>
+
+    <ion-col (click)="data_analytics()"
+      style="background-color:transparent; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-left-radius: 15px; margin-left: 5px;margin-right: 5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="stats" color="medium-shade"></ion-icon> -->
+            <img src="assets/imgs/analytics.png" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">Analytics</td>
+        </tr>
+      </table>
+    </ion-col>
+
+    <ion-col (click)="all_outlets()"
+      style="background-color:transparent; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-left-radius: 15px; margin-left: 5px;margin-right: 5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="list-box" color="tertiary"></ion-icon> -->
+            <img src="assets/imgs/outlet.png" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">Outlets</td>
+        </tr>
+      </table>
+    </ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <ion-col (click)="all_counters()" style="background-color:transparent; border-bottom-left-radius:
+          15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius:
+          15px;border-bottom-left-radius: 15px;
+          margin-left: 5px;margin-right:5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="clipboard" color="danger"></ion-icon> -->
+            <img src="assets/imgs/counter.png" width='50' height='50' />
+
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">Counters</td>
+        </tr>
+      </table>
+    </ion-col>
+
+    <ion-col (click)="product_mapping()"
+      style="background-color:transparent; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-left-radius: 15px; margin-left: 5px;margin-right: 5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center;">
+            <!-- <ion-icon style="font-size: 30pt" name="settings" color="warning"></ion-icon> -->
+            <img src="assets/imgs/sebaranproduk.png" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">ProdMap</td>
+        </tr>
+      </table>
+    </ion-col>
+
+    <ion-col (click)="expansion()"
+      style="background-color:transparent; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-left-radius: 15px; margin-left: 5px;margin-right: 5px;">
+      
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="log-out" color="success"></ion-icon> -->
+            <img src="assets/imgs/expansion.png" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">
+            Expans</td>
+        </tr>
+      </table>
+    </ion-col>
+  </ion-row>
+  <br>
+  <ion-row *ngIf="tampilLogout=='Y'">
+    <ion-col  (click)="settings()" style="background-color:transparent; border-bottom-left-radius:
+          15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius:
+          15px;border-bottom-left-radius: 15px;
+          margin-left: 5px;margin-right:5px;">
+      
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="log-out" color="success"></ion-icon> -->
+            <img src="assets/imgs/setting.jpg" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">Setting</td>
+        </tr>
+      </table>
+    </ion-col>
+
+    <ion-col (click)="logout()"
+      style="background-color:transparent; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-left-radius: 15px; margin-left: 5px;margin-right: 5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="clipboard" color="danger"></ion-icon> -->
+            <img src="assets/imgs/logout.png" width='50' height='50' />
+
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">Logout</td>
+        </tr>
+      </table>
+    </ion-col>
+
+    <ion-col
+      style="background-color:transparent; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-left-radius: 15px; margin-left: 5px;margin-right: 5px;">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: center">
+            <!-- <ion-icon style="font-size: 30pt" name="log-out" color="success"></ion-icon> -->
+            <img src="assets/imgs/add.png" width='50' height='50' />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;font-size: 11pt">...</td>
+        </tr>
+      </table>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

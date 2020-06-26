@@ -1,0 +1,93 @@
+<!-- <ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>VCI All Counters</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+  <!-- <div ion-fixed style="position: absolute;
+  top: 1%;
+  left: 1%;
+  width: auto;
+  height: auto;">
+    <table style="border:0px solid black;">
+      <tr>
+        <td>
+          <button ion-button color="light" icon-only menuToggle>
+            <ion-icon name='menu'></ion-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div> -->
+
+  <div ion-fixed style="position: absolute;
+  top: 1%;
+  right: 1%;
+  width: auto;
+  height: auto;">
+
+    <div id="more_options">
+      <table style="border:0px solid black;">
+        <tr>
+          <td>
+            <button ion-button icon-start color="success-shade" round id="loading" style="display: none;">
+              <ion-icon name="information-circle"></ion-icon>
+              &nbsp;Loading...&nbsp;
+            </button>&nbsp;
+          </td>
+          <!-- <td>
+            <button ion-button icon-start color="light-tint" round (click)="category_counter($event)">
+              <ion-icon name="pin" color="primary"></ion-icon>
+              open&nbsp;&nbsp;&nbsp;&nbsp;
+              <ion-icon name="pin" color="danger"></ion-icon>
+              close&nbsp;&nbsp;&nbsp;&nbsp;
+              <ion-icon name="pin" color="warning"></ion-icon>
+              coming soon
+            </button>&nbsp;
+          </td> -->
+          <td>
+            <button ion-button icon-start color="primary-tint" round (click)="category_counter($event)">
+              <ion-icon name="home"></ion-icon>
+              &nbsp;{{counter}}&nbsp;
+            </button>&nbsp;
+          </td>
+          <td>
+            <img (click)="menu($event)" src="assets/imgs/logo.png" width="50" height="50" style="border-bottom-left-radius: 50px;
+                              border-top-left-radius: 50px;
+                              border-bottom-right-radius: 50px;
+                              border-top-right-radius: 50px;
+                              border:3px solid #fff;
+                              background-color: #fff;">
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <div id="daerah" style="width: 100%;height: 100%;"></div>
+
+  <!-- <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="addCounter()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab> -->
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger">
+      <ion-icon name="apps"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="setupAllCounter()">
+        <ion-icon name="list"></ion-icon>
+      </button>
+      <button ion-fab (click)="addCounter()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

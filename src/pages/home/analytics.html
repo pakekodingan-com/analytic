@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Data Analytics</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-card>
+            <div id="maps" style="width: 100%;height: 407px;"></div>
+            <ion-item-divider color="light-tint">Radius selected area : {{rad}} Km
+            </ion-item-divider>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="dark-tint">List Outler in Area Selected
+              <ion-note item-end>
+                <p style="color:#fff">{{tots}} Outlets</p>
+              </ion-note>
+            </ion-item-divider>
+            <div style="background-color: #fff;
+                        width: 100%;
+                        height: 405px;
+                        overflow: scroll">
+              <ion-item *ngFor="let o of outlet;let i =index;">
+                <h2>{{i+1}}. {{o.outletname}} ({{o.KdOutlet}})</h2>
+                <p>{{o.Alm1Toko}} • {{o.KotaToko}}</p>
+                <!-- <button ion-button clear item-end
+                  (click)="open_outlet(o.KdOutlet,o.outletname,o.latitude,o.longitude)">View</button> -->
+              </ion-item>
+            </div>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="success-tint">Data Sales 12 Months
+            </ion-item-divider>
+            <ion-item>
+              <canvas #barCanvas3></canvas>
+            </ion-item>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="tertiary-tint">Sales outlet selected
+              <!-- . ( Total : {{tot_sales}} ) <ion-icon name="list" item-end (click)="list_sales_outlet(j,k,l,m)"></!-->
+            </ion-item-divider>
+            <ion-item>
+              <canvas #barCanvas></canvas>
+            </ion-item>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="medium-tint">Top 10 Product outlet selected
+              <!-- <ion-icon name="list" item-end (click)="list_all_product_outlet(j,k,l,m)"></ion-icon> -->
+            </ion-item-divider>
+            <ion-item>
+              <canvas #barCanvas2></canvas>
+            </ion-item>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="warning">
+              Contribution By Brand 3 Months
+            </ion-item-divider>
+            <ion-item><canvas #pieCanvas></canvas></ion-item>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="danger">Real Month VS Avg 3 Months
+            </ion-item-divider>
+            <ion-item><canvas #doughnutCanvas></canvas></ion-item>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-card>
+            <ion-item-divider color="secondary-tint">
+              Descriptions
+            </ion-item-divider>
+            <ion-item>Not Result</ion-item>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Bussiness Type
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="apply($event)">
+        <ion-icon name="checkmark-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="outer-content">
+
+  <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <ion-list radio-group formControlName="langs" [(ngModel)]="place_type">
+
+      
+      <ion-item>
+        <ion-label>Beauty Salon</ion-label>
+        <ion-radio value="beauty_salon"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cafe</ion-label>
+        <ion-radio value="cafe"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Convenience Store</ion-label>
+        <ion-radio value="convenience_store"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Department Store</ion-label>
+        <ion-radio value="department_store"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Funeral Home</ion-label>
+        <ion-radio value="funeral_home"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Grocery or Supermarket</ion-label>
+        <ion-radio value="grocery_or_supermarket"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gym</ion-label>
+        <ion-radio value="gym"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hair Care</ion-label>
+        <ion-radio value="hair_care"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Home Goods Store</ion-label>
+        <ion-radio value="home_goods_store"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hospital</ion-label>
+        <ion-radio value="hospital"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Insurance Agency</ion-label>
+        <ion-radio value="insurance_agency"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Laundry</ion-label>
+        <ion-radio value="laundry"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Local Government Office</ion-label>
+        <ion-radio value="local_government_office"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pet Store</ion-label>
+        <ion-radio value="pet_store"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pharmacy</ion-label>
+        <ion-radio value="pharmacy"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Primary School</ion-label>
+        <ion-radio value="primary_school"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Real Estate Agency</ion-label>
+        <ion-radio value="real_estate_agency"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Restaurant</ion-label>
+        <ion-radio value="restaurant"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>School</ion-label>
+        <ion-radio value="school"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Secondary School</ion-label>
+        <ion-radio value="secondary_school"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Shopping Mall</ion-label>
+        <ion-radio value="shopping_mall"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Spa</ion-label>
+        <ion-radio value="spa"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Store</ion-label>
+        <ion-radio value="store"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Supermarket</ion-label>
+        <ion-radio value="supermarket"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tourist Attraction</ion-label>
+        <ion-radio value="tourist_attraction"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Travel Agency</ion-label>
+        <ion-radio value="travel_agency"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>University</ion-label>
+        <ion-radio value="university"></ion-radio>
+      </ion-item>
+
+    </ion-list>
+
+
+  </form>
+</ion-content>
+
+<style>
+  ion-list+ion-list {
+    margin-top: 0;
+  }
+
+  .small-text {
+    font-size: 10px;
+  }
+
+</style>

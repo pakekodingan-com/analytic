@@ -1,0 +1,41 @@
+<ion-content style="background-color: #52504d;">
+  <ion-grid id="pop" ion-fixed style="height: 100%;background: #52504d;opacity: 1;">
+    <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column;">
+      <div class="pop">
+        <br><br>
+        <div class="container">
+          <ion-list no-line>
+            <div style="text-align: center;font-size: 2em;"><img src="assets/imgs/logo.png" width="200" height="200"
+                (click)="loginform()">
+            </div>
+            <div style="color:#fff;text-align: center;">
+              <!-- <p style="font-size: 30pt;">VCI Analytics</p> -->
+              <h1>VCI Analytics</h1>
+              <!-- <button ion-button color="primary" (click)="login()" medium round>Get Stated</button> -->
+            </div>
+          </ion-list>
+        </div>
+      </div>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<style>
+  .pop {
+    transition: 0.3s;
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+
+</style>

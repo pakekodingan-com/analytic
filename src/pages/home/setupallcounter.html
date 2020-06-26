@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>All Counter</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="form_search()">
+        <ion-icon name="search"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close-circle"></ion-icon>&nbsp;&nbsp;
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list>
+    <ion-item *ngFor="let val of counterList" (click)="pilih(val.id)">
+      <h2>{{val.namacounter}}</h2>
+      <p>{{val.address}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
